@@ -27,6 +27,10 @@ export default {
       type: Boolean,
       default: false,
     },
+    only: {
+      type: Array,
+      default: [],
+    },
   },
   render(h, { props, data, children }) {
     return h('a', {
@@ -51,6 +55,7 @@ export default {
               replace: props.replace,
               preserveScroll: props.preserveScroll,
               preserveState: props.preserveState,
+              only: props.only,
             })
           }
         },
