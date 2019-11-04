@@ -19,7 +19,7 @@ export default {
     }
 
     const stateKey = this.$options.remember.key instanceof Function
-      ? this.$options.remember.key()
+      ? this.$options.remember.key.apply(this)
       : this.$options.remember.key
 
     const restored = Inertia.restore(stateKey)
